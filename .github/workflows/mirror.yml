@@ -11,6 +11,9 @@ jobs:
     steps:
 
     - name: show
+      run: echo "hallo"
+
+    - name: show
       run: echo "$names"
       env:
         names: ${{env.GITHUB_REPOSITORY}}

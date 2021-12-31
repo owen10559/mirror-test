@@ -14,9 +14,7 @@ jobs:
       run: echo "hallo"
 
     - name: show
-      run: echo "$names"
-      env:
-        names: ${{env.GITHUB_REPOSITORY}}
+      run: echo "$GITHUB_REPOSITORY"
 
     - name: Copy Github Repos To Gitee  # 名字随便起
       uses: Yikun/hub-mirror-action@v1.1  # 使用Yikun/hub-mirror-action

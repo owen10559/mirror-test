@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
 
+    - name: show
+      run: echo "$names"
+      env:
+        names: ${{GITHUB_REPOSITORY}}
+
     - name: Copy Github Repos To Gitee  # 名字随便起
       uses: Yikun/hub-mirror-action@v1.1  # 使用Yikun/hub-mirror-action
       with:

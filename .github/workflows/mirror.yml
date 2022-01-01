@@ -12,14 +12,13 @@ jobs:
 
     - name: show
       env:
-        REPO_NAME: ${GITHUB_REPOSITORY#*/}
+        REPO_NAME: !!str ${GITHUB_REPOSITORY#*/}
       run: echo "$REPO_NAME"
 
     - name: show
       # run: echo "${GITHUB_REPOSITORY#owen10559/}"
       run: |
-        echo $GITHUB_REPOSITORY#*/
-        echo ${GITHUB_REPOSITORY#owen10559/}
+        echo ${GITHUB_REPOSITORY#*/}
 
     # - name: Copy Github Repos To Gitee  # 名字随便起
     #   uses: Yikun/hub-mirror-action@v1.1  # 使用Yikun/hub-mirror-action

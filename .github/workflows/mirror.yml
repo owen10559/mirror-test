@@ -13,7 +13,7 @@ jobs:
     - name: show
       env:
         REPO_NAME: ${GITHUB_REPOSITORY#*/}
-      run: echo "${env.REPO_NAME}"
+      run: echo "$REPO_NAME"
 
     - name: show
       # run: echo "${GITHUB_REPOSITORY#owen10559/}"

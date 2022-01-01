@@ -11,11 +11,6 @@ jobs:
     steps:
 
     - name: show
-      env:
-        REPO_NAME: !!str ${GITHUB_REPOSITORY#*/}
-      run: echo "$REPO_NAME"
-
-    - name: show
       # run: echo "${GITHUB_REPOSITORY#owen10559/}"
       run: |
         echo ${GITHUB_REPOSITORY#*/}
